@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <title>Roll Ball</title>
+  </head>
+  <body>
+  <div id="load" style=" z-index: -1;">
+<div style="background-color: grey; position:absolute; top: 0; left: 0; width: 100%; height: 100%;"><img src="https://athdot.github.io/rollball/TemplateData/loading.png" style="position: absolute; top: 50%; left: 50%; transform:translate(-480px,-360px)"></img><img src="https://athdot.github.io/rollball/TemplateData/athdotlogo.png" style="position: absolute; top: 5px; left: 100; width: 500px;"></img><img src="https://athdot.github.io/rollball/TemplateData/loading.gif" style="position: absolute; top: 50%; left: 50%; width: 200px; transform:translate(-100px,200px)"></img><p style="position: absolute; top: 50%; left: 50%; color: white; transform:translate(-30px,350px); font-family: Verdana, Geneva, sans-serif; font-size: 15;">Loading...</p></div>
+<script>
+var isChromium = window.chrome,
+    winNav = window.navigator,
+    vendorName = winNav.vendor,
+    isOpera = winNav.userAgent.indexOf("OPR") > -1,
+    isIEedge = winNav.userAgent.indexOf("Edge") > -1,
+    isIOSChrome = winNav.userAgent.match("CriOS");
+
+if(isIOSChrome){} else if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false) {} else { 
+window.location = "https://athdot.github.io/rollball/wrongbrowser.html"
+}
+function funcx()
+   {
+document.getElementById('load').setAttribute('style','display:none;')
+     document.getElementById('canvas').setAttribute('style','width: ' + width + 'px; height: ' + height + 'px; position:absolute; top: 0px; left:0px; cursor: none;');
+   }
+setTimeout(funcx, 10000);
+  window.addEventListener('resize', function(event){
+  var width = window.innerWidth;
+      var height = window.innerHeight;
+document.getElementById('canvas').setAttribute('style','width: ' + width + 'px; height: ' + height + 'px; position:absolute; top: 0px; left:0px; cursor: none;')
+});
+        var width = window.innerWidth;
+      var height = window.innerHeight;
+window.onload = document.getElementById('canvas').setAttribute('style','width: ' + width + 'px; height: ' + height + 'px; position:absolute; top: 0px; left:0px; cursor: none; display: none;'); 
+  document.getElementById('canvas').setAttribute('style','width: ' + width + 'px; height: ' + height + 'px; position:absolute; top: 0px; left:0px; cursor: none;'); 
+</script>
+</div>
+<object data="https://athdot.github.io/rollball/game.html" style="position:absolute; top: 0px; left: 0px; display: none;" id="canvas"></object>
+  </body>
+</html>
